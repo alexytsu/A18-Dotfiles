@@ -2,6 +2,7 @@
 URxvt*scrollBar: false
 URxvt*cursorUnderline: true
 URxvt*font: xft:Source Code Pro
+URxvt*perl-lib: /usr/lib/urxvt/perl/
 
 ! Cursor
 URxvt.cursorBlink:          true
@@ -51,3 +52,7 @@ URxvt.pointerBlank:         true
 !! white dark/light
 *color7: #eee8d5
 *color15: #fdf6e3
+
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
