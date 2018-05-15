@@ -3,6 +3,11 @@
 # for examples
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias python='python3'
+alias python2='/usr/bin/python'
+alias pip='pip3'
+alias pip2='/usr/bin/pip'
+alias unsw='ssh z5166086@login.cse.unsw.edu.au'
 
 # If not running interactively, don't do anything
 case $- in

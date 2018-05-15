@@ -1,0 +1,7 @@
+[credential]
+	helper = store
+[user]
+	email = alexanderytsu@gmail.com
+	name = Alexander Su
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
