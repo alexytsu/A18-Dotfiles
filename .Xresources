@@ -1,7 +1,7 @@
 ! URxvt settings
 URxvt*scrollBar: false
 URxvt*cursorUnderline: true
-URxvt*font: xft:Source Code Pro
+URxvt*font: xft:Source Code Pro for Powerline
 
 ! special
 *foreground:   #d2c5bc
