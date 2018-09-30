@@ -7,8 +7,10 @@ alias unsw='ssh z5166086@login.cse.unsw.edu.au'
 alias uni='cd ~/Repositories/02-University'
 alias personal='cd ~/Repositories/01-Personal'
 alias comp1531='cd ~/Repositories/02-University/COMP1531'
+alias activate='source ./venv/bin/activate'
 
 export EDITOR='vim'
+export TERM='termite'
 
 # If not running interactively, don't do anything
 case $- in
