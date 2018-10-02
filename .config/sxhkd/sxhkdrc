@@ -1,14 +1,14 @@
 # terminal emulator
 super + Return
-	urxvt
+	termite
 
 # run an emacs client
 super + shift + Return
-	emacsclient -c
+	code
 
 # program launcher
 super + @space
-	rofi -show run
+	rofi -combi-modi window,ssh,run -theme solarized -show combi
 
 # make sxhkd reload its configuration files:
 super + Escape
