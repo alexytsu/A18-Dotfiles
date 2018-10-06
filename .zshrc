@@ -3,6 +3,8 @@ export ZSH=~/.oh-my-zsh
 export LC_CTYPE=en_AU.UTF-8
 export LC_ALL=en_AU.UTF-8
 export EDITOR="vim"
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME.tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator
 
 # Configure oh-my-zsh
 plugins=(sudo, git)
@@ -27,4 +29,4 @@ alias uni='cd ~/Repositories/02-University'
 alias personal='cd ~/Repositories/01-Personal'
 alias comp1531='cd ~/Repositories/02-University/COMP1531'
 alias activate='source ./venv/bin/activate'
-alias UNSW="ssh z5166086@login.cse.unsw.edu.au"
+
