@@ -1,7 +1,10 @@
 ! URxvt settings
 URxvt*scrollBar: false
 URxvt*cursorUnderline: true
-URxvt*font: xft:Source Code Pro for Powerline
+
+! Font
+*font: xft:Source Code Pro for Powerline 
+rofi.font: Source Code Pro for Powerline 11
 
 ! Cursor
 URxvt.cursorBlink:          true
