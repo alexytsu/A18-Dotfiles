@@ -35,7 +35,7 @@ alias upgradable='apt list --upgradable'
 alias upgrade='sudo apt upgrade'
 
 alias shake='adb shell input keyevent 82'
-alias android='emulator @Nexus_5X_API_28_x86'
+alias android='emulator @Nexus_5X_API_28_x86 &'
 alias pyprofile='python3 -m cProfile -s cumtime'
 
 # Alias for my dotfile storage and sync
