@@ -1,9 +1,10 @@
 ! URxvt settings
+Xft.dpi: 144
 URxvt*scrollBar: false
 URxvt*cursorUnderline: true
 
 ! Font
-*font: xft:Source Code Pro for Powerline 
+*font: xft:Hack
 rofi.font: Source Code Pro for Powerline 11
 
 ! Cursor

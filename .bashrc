@@ -125,3 +125,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+# Virtual Environment Wrapper
+alias workoncv-3.4="source /home/alexytsu/Repositories/03-University/DRC2019/OpenCVC++/OpenCV-3.4-py3/bin/activate"
+# Virtual Environment Wrapper
+alias workoncv-3.4="source /home/alexytsu/Repositories/03-University/DRC2019/OpenCVC++/OpenCV-3.4-py3/bin/activate"
+# Virtual Environment Wrapper
+alias workoncv-3.4="source /home/alexytsu/Repositories/03-University/DRC2019/OpenCVC++/OpenCV-3.4-py3/bin/activate"
+# Virtual Environment Wrapper
+alias workoncv-3.4="source /home/alexytsu/Repositories/03-University/DRC2019/OpenCVC++/OpenCV-3.4-py3/bin/activate"
+# Virtual Environment Wrapper
+alias workoncv-3.4="source /home/alexytsu/Repositories/03-University/DRC2019/OpenCVC++/OpenCV-3.4-py3/bin/activate"
