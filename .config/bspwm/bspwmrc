@@ -15,5 +15,4 @@ bspc config focused_border_color #eeaaaa
 
 xrdb -merge ~/.Xresources &
 compton &
-polybar top &
 feh --bg-scale ~/.config/bspwm/wallpaper.jpg &

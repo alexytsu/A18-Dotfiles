@@ -9,3 +9,4 @@
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = /home/alexytsu/.gitignore_global
+

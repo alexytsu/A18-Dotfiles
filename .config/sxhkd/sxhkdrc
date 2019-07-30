@@ -1,6 +1,6 @@
 # terminal emulator
 super + Return
-	termite
+	urxvt
 
 # run an emacs client
 super + shift + Return
