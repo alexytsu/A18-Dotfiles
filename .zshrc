@@ -4,9 +4,12 @@ export LC_CTYPE=en_AU.UTF-8
 export LC_ALL=en_AU.UTF-8
 export EDITOR="vim"
 export ANDROID_HOME=$HOME/Development/Android/SDK
-export PATH=$PATH:$ANDROID_HOME.tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:~/Repositories/01-Personal/scripts/bin
 export MONO_ROOT="$HOME/Repositories"
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Development/Keys/Firebase/awaytravel-firebase-key-alex-dev.json"
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/Development/golang
+export PATH=$PATH:$ANDROID_HOME.tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:~/Repositories/01-Personal/scripts/bin:$GOPATH/bin:$GOROOT/bin
+export UNSW="$MONO_ROOT/03-University"
 
 # Make shit XDG compliant
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -30,6 +33,10 @@ alias away='cd $HOME/Repositories/02-Work/Helix/jcms/awaytravel/planner'
 alias repos='cd $HOME/Repositories'
 alias mono='cd $HOME/Repositories'
 alias sand='cd $HOME/Repositories/01-Personal/sandbox'
+alias 9517='cd $UNSW/COMP9517 && activate'
+alias 9444='cd $UNSW/COMP9444 && activate'
+alias 9417='cd $UNSW/COMP9417 && activate'
+alias 4920='cd $UNSW/COMP4920'
 
 # Command shortcuts
 alias activate='source ./venv/bin/activate'
@@ -38,13 +45,8 @@ alias unswvpn='sudo /usr/sbin/openvpn --config $HOME/.config/OpenVPN/cse.ovpn'
 alias swvpn='sudo /usr/sbin/openvpn --config $HOME/.config/OpenVPN/alex-su-softwire.ovpn'
 
 alias copy='xclip -selection c'
-
-alias update='sudo apt update'
-alias upgradable='apt list --upgradable'
-alias upgrade='sudo apt upgrade'
-
 alias shake='adb shell input keyevent 82'
-alias android='emulator @Nexus5X &'
+alias nexus='emulator @Nexus5X &'
 alias pyprofile='python -m cProfile -s cumtime'
 alias installed='apt list --installed'
 
@@ -55,3 +57,5 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 xrdb -merge ~/.Xresources
 
 eval $(thefuck --alias)
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
