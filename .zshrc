@@ -8,7 +8,8 @@ export MONO_ROOT="$HOME/Repositories"
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Development/Keys/Firebase/awaytravel-firebase-key-alex-dev.json"
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Development/golang
-export PATH=$PATH:$ANDROID_HOME.tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:~/Repositories/01-Personal/scripts/bin:$GOPATH/bin:$GOROOT/bin
+export CONDAPATH=$HOME/Development/Anaconda3
+export PATH=$PATH:$ANDROID_HOME.tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:~/Repositories/01-Personal/scripts/bin:$GOPATH/bin:$GOROOT/bin:$CONDAPATH/bin
 export UNSW="$MONO_ROOT/03-University"
 
 # Make shit XDG compliant
@@ -59,3 +60,19 @@ xrdb -merge ~/.Xresources
 eval $(thefuck --alias)
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/alexytsu/Development/Anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/alexytsu/Development/Anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/alexytsu/Development/Anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/alexytsu/Development/Anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

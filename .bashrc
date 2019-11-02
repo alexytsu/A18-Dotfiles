@@ -135,3 +135,19 @@ alias workoncv-3.4="source /home/alexytsu/Repositories/03-University/DRC2019/Ope
 alias workoncv-3.4="source /home/alexytsu/Repositories/03-University/DRC2019/OpenCVC++/OpenCV-3.4-py3/bin/activate"
 # Virtual Environment Wrapper
 alias workoncv-3.4="source /home/alexytsu/Repositories/03-University/DRC2019/OpenCVC++/OpenCV-3.4-py3/bin/activate"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/alexytsu/Development/Anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/alexytsu/Development/Anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/alexytsu/Development/Anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/alexytsu/Development/Anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

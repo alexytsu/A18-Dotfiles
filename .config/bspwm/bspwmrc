@@ -2,7 +2,8 @@
 
 sxhkd &
 
-bspc monitor -d term web emacs code music chat files extra
+bspc monitor edP1 -n 0 term web emacs code music chat files extra
+bspc monitor HDMI1 -n 1 term web emacs code music chat files extra
 
 bspc config border_width         5
 bspc config window_gap          12
