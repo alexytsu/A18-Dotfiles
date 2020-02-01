@@ -3,16 +3,14 @@ Xft.dpi: 144
 URxvt*scrollBar: false
 URxvt*cursorUnderline: true
 
-! Font
-*font: xft:Hack
-rofi.font: Source Code Pro for Powerline 11
-
 ! Cursor
 URxvt.cursorBlink:          true
 URxvt.cursorColor:          #657b83
 
 ! Pointer
 URxvt.pointerBlank:         true
+URxvt.font: xft:Source Code Pro
+URxvt.letterSpace: 1
 
 !!Source http://github.com/altercation/solarized
 
