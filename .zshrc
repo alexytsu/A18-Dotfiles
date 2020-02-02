@@ -2,7 +2,7 @@
 export ZSH=~/.config/oh-my-zsh
 export LC_CTYPE=en_AU.UTF-8
 export LC_ALL=en_AU.UTF-8
-export EDITOR="nvim"
+export EDITOR="vim"
 
 # Make shit XDG compliant
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -55,7 +55,6 @@ alias vim="nvim"
 alias activate='source ./venv/bin/activate'
 alias copy='xclip -selection c'
 alias shake='adb shell input keyevent 82'
-alias nexus='emulator @Nexus5X &'
 alias pyprofile='python -m cProfile -s cumtime'
 
 ### ===========================================================================
@@ -69,9 +68,6 @@ export GOPATH="$MONO_ROOT/01-Personal"
 
 # Alias for my dotfile storage and sync
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-
-# Refresh colours etc
-xrdb -merge ~/.Xresources
 
 ### ===========================================================================
 # Application Specific 
