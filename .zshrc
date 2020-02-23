@@ -7,9 +7,6 @@ export EDITOR="vim"
 # Make shit XDG compliant
 export XDG_CONFIG_HOME="$HOME/.config"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/config"
-export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/asdf/.asdfrc"
-export ASDF_DATA_DIR="$XDG_CONFIG_HOME/asdf"
-export ASDF_DIR="$XDG_CONFIG_HOME/asdf"
 
 # Configure oh-my-zsh
 plugins=(git)
@@ -73,5 +70,4 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 # Application Specific 
 
 ### asdf-vm
-. $HOME/.config/asdf/asdf.sh
-. $HOME/.config/asdf/completions/asdf.bash
+. /opt/asdf-vm/asdf.sh
