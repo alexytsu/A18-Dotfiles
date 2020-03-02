@@ -24,7 +24,7 @@ source $ZSH/oh-my-zsh.sh
 export MONO_ROOT="$HOME/Repositories"
 export UNSW="$MONO_ROOT/03-University"
 export ANDROID_SDK="$HOME/Development/Android/SDK"
-export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$PATH
+export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:~/.local/bin:$PATH
 
 #### Easy navigations
 alias uni='$UNSW'
