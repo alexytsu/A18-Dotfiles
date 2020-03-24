@@ -28,6 +28,7 @@ export UNSW="$MONO_ROOT/03-University"
 export WORK="$MONO_ROOT/02-Work"
 export ANDROID_SDK="$HOME/Development/Android/SDK"
 export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:~/.local/bin:$PATH
+export PATH="$(yarn global bin):$PATH"
 
 #### Easy navigations
 alias uni='$UNSW'
@@ -46,8 +47,6 @@ alias unswvpn='sudo /usr/sbin/openvpn --config $HOME/.config/OpenVPN/cse.ovpn'
 
 #### Utilities
 alias activate='source ./venv/bin/activate'
-alias copy='xclip -selection c'
-alias shake='adb shell input keyevent 82'
 alias pyprofile='python -m cProfile -s cumtime'
 alias whence='pstree -s $$'
 
