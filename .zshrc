@@ -22,6 +22,7 @@ export MONO_ROOT="$HOME/Repositories"
 export UNSW="$MONO_ROOT/03-University"
 export ANDROID_SDK="$HOME/Development/Android/SDK"
 export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:~/.local/bin:$PATH
+export NXTGEN_ROOT="$MONO_ROOT/02-Work/nxtgen/nxtgen-software"
 
 #### Easy navigations
 alias uni='$UNSW'
@@ -71,3 +72,4 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 ### asdf-vm
 . /opt/asdf-vm/asdf.sh
+eval $(thefuck --alias)
