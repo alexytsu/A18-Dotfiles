@@ -5,6 +5,10 @@ export LC_ALL=en_AU.UTF-8
 export EDITOR="vim"
 export PROMPT_EOL_MARK=''
 
+# Hardware configs
+xrandr --output HDMI-0 --mode 2560x1440 --rate 144.01
+setxkbmap -option caps:escape
+
 # Make shit XDG compliant
 export XDG_CONFIG_HOME="$HOME/.config"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/config"
@@ -17,8 +21,12 @@ plugins=(git)
 ZSH_THEME=robbyrussell
 source $ZSH/oh-my-zsh.sh
 
-# Hardware specific
-setxkbmap -option caps:escape
+# Configure ROS
+source /opt/ros/kinetic/setup.zsh
+source "$HOME/Develop/catkin_ws/devel/setup.zsh"
+export NXTGEN_ROOT="$HOME/Develop/catkin_ws/src/nxtgen-software"
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/Develop/catkin_ws
+export CATKIN_WS=$HOME/Develop/catkin_ws
 
 ### ===========================================================================
 ### Paths
@@ -45,6 +53,7 @@ alias nxtgen='cd $WORK/NXTGEN/nxtgen-software'
 alias mono='cd $MONO_ROOT'
 alias repos='cd $MONO_ROOT'
 alias sand='cd $MONO_ROOT/01-Personal/sandbox'
+alias nxtgen='cd $HOME/Develop/catkin_ws/src/nxtgen-software'
 
 ### Command shortcuts
 #### Remote Access
