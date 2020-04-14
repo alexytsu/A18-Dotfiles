@@ -17,18 +17,24 @@ plugins=(git)
 ZSH_THEME=robbyrussell
 source $ZSH/oh-my-zsh.sh
 
+# Hardware specific
 setxkbmap -option caps:escape
 
 ### ===========================================================================
-### Custom aliases
+### Paths
+
+### Installed locations
+export ANDROID_SDK="$HOME/Development/Android/SDK"
+export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:~/.local/bin:$PATH
+export PATH="$(yarn global bin):$PATH"
 
 #### Folder Locations
 export MONO_ROOT="$HOME/Repositories"
 export UNSW="$MONO_ROOT/03-University"
 export WORK="$MONO_ROOT/02-Work"
-export ANDROID_SDK="$HOME/Development/Android/SDK"
-export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:~/.local/bin:$PATH
-export PATH="$(yarn global bin):$PATH"
+
+### ===========================================================================
+### Custom aliases
 
 #### Easy navigations
 alias uni='$UNSW'
@@ -43,16 +49,11 @@ alias sand='cd $MONO_ROOT/01-Personal/sandbox'
 ### Command shortcuts
 #### Remote Access
 alias unswssh='ssh z5166086@login.cse.unsw.edu.au'
-alias unswvpn='sudo /usr/sbin/openvpn --config $HOME/.config/OpenVPN/cse.ovpn'
 
 #### Utilities
 alias activate='source ./venv/bin/activate'
 alias pyprofile='python -m cProfile -s cumtime'
 alias whence='pstree -s $$'
-
-### ===========================================================================
-### Paths
-
 
 ### ===========================================================================
 ### Dotfile system
@@ -67,4 +68,5 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 . $HOME/.config/asdf/asdf.sh
 . $HOME/.config/asdf/completions/asdf.bash
 
+## thefuck
 eval $(thefuck --alias)
