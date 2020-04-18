@@ -3,6 +3,8 @@ export ZSH=~/.config/oh-my-zsh
 export LC_CTYPE=en_AU.UTF-8
 export LC_ALL=en_AU.UTF-8
 export EDITOR="vim"
+export PROMPT_EOL_MARK=''
+export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0 #fixes minimising CS:GO
 
 # Make shit XDG compliant
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -13,9 +15,16 @@ plugins=(git)
 ZSH_THEME=robbyrussell
 source $ZSH/oh-my-zsh.sh
 
+# Hardware specific
+setxkbmap -option caps:escape
 
 ### ===========================================================================
-### Custom aliases
+### Paths
+
+### Installed locations
+export ANDROID_SDK="$HOME/Development/Android/SDK"
+export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:~/.local/bin:$PATH
+export PATH="$(yarn global bin):$PATH"
 
 #### Folder Locations
 export MONO_ROOT="$HOME/Repositories"
@@ -23,43 +32,35 @@ export UNSW="$MONO_ROOT/03-University"
 export ANDROID_SDK="$HOME/Development/Android/SDK"
 export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:~/.local/bin:$PATH
 export NXTGEN_ROOT="$MONO_ROOT/02-Work/nxtgen/nxtgen-software"
+export WORK="$MONO_ROOT/02-Work"
+
+### ===========================================================================
+### Custom aliases
 
 #### Easy navigations
 alias uni='$UNSW'
 alias unsw='$UNSW'
 alias pers='cd $MONO_ROOT/01-Personal'
-alias work='cd $MONO_ROOT/02-Work'
-alias prax='cd $MONO_ROOT/02-Work/Praxis'
-alias hx='cd $MONO_ROOT/02-Work/Helix'
-alias wheel='cd $MONO_ROOT/02-Work/Praxis/wheel-easy'
-alias jcms='cd $MONO_ROOT/02-Work/Helix/jcms'
-alias away='cd $MONO_ROOT/02-Work/Helix/jcms/awaytravel/planner'
-alias repos='cd $MONO_ROOT'
+alias work='cd $WORK'
+alias nxtgen='cd $WORK/NXTGEN/nxtgen-software'
 alias mono='cd $MONO_ROOT'
+alias repos='cd $MONO_ROOT'
 alias sand='cd $MONO_ROOT/01-Personal/sandbox'
-alias 9517='cd $UNSW/COMP9517'
-alias 9444='cd $UNSW/COMP9444'
-alias 9417='cd $UNSW/COMP9417'
-alias 4920='cd $UNSW/COMP4920'
 
 ### Command shortcuts
 #### Remote Access
 alias unswssh='ssh z5166086@login.cse.unsw.edu.au'
-alias unswvpn='sudo /usr/sbin/openvpn --config $HOME/.config/OpenVPN/cse.ovpn'
-alias swvpn='sudo /usr/sbin/openvpn --config $HOME/.config/OpenVPN/alex-su-softwire.ovpn'
 
 #### Utilities
-alias vim="nvim"
 alias activate='source ./venv/bin/activate'
-alias copy='xclip -selection c'
-alias shake='adb shell input keyevent 82'
 alias pyprofile='python -m cProfile -s cumtime'
+alias whence='pstree -s $$'
+alias gog='g++ *.cpp && ./a.out'
 
 ### ===========================================================================
 ### Paths
 
 # Configure paths
-export GOPATH="$MONO_ROOT/01-Personal"
 
 ### ===========================================================================
 ### Dotfile system
@@ -70,6 +71,8 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 ### ===========================================================================
 # Application Specific 
 
-### asdf-vm
-. /opt/asdf-vm/asdf.sh
+## asdf VM
 eval $(thefuck --alias)
+
+# The next line updates PATH for Netlify's Git Credential Helper.
+if [ -f '/home/alexytsu/.netlify/helper/path.zsh.inc' ]; then source '/home/alexytsu/.netlify/helper/path.zsh.inc'; fi
