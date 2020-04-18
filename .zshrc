@@ -24,7 +24,6 @@ setxkbmap -option caps:escape
 ### Installed locations
 export ANDROID_SDK="$HOME/Development/Android/SDK"
 export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:~/.local/bin:$PATH
-export PATH="$(yarn global bin):$PATH"
 
 #### Folder Locations
 export MONO_ROOT="$HOME/Repositories"
