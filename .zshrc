@@ -4,6 +4,7 @@ export LC_CTYPE=en_AU.UTF-8
 export LC_ALL=en_AU.UTF-8
 export EDITOR="vim"
 export PROMPT_EOL_MARK=''
+export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0 #fixes minimising CS:GO
 
 # Hardware configs
 xrandr --output HDMI-0 --mode 2560x1440 --rate 144.01
@@ -63,6 +64,10 @@ alias unswssh='ssh z5166086@login.cse.unsw.edu.au'
 alias activate='source ./venv/bin/activate'
 alias pyprofile='python -m cProfile -s cumtime'
 alias whence='pstree -s $$'
+alias gog='g++ *.cpp && ./a.out'
+
+### ===========================================================================
+### Paths
 
 ### ===========================================================================
 ### Dotfile system
@@ -79,3 +84,6 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 ## thefuck
 eval $(thefuck --alias)
+
+# The next line updates PATH for Netlify's Git Credential Helper.
+if [ -f '/home/alexytsu/.netlify/helper/path.zsh.inc' ]; then source '/home/alexytsu/.netlify/helper/path.zsh.inc'; fi
