@@ -56,6 +56,9 @@ alias pyprofile='python -m cProfile -s cumtime'
 alias whence='pstree -s $$'
 alias gog='g++ *.cpp && ./a.out'
 
+#### Minecraft Server
+alias forged='forge-1.12.2d'
+
 ### ===========================================================================
 ### Paths
 
