@@ -24,10 +24,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Configure ROS
 source /opt/ros/kinetic/setup.zsh
-source "$HOME/Develop/catkin_ws/devel/setup.zsh"
-export NXTGEN_ROOT="$HOME/Develop/catkin_ws/src/nxtgen-software"
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/Develop/catkin_ws
-export CATKIN_WS=$HOME/Develop/catkin_ws
+export NXTGEN_ROOT="$HOME/Develop/Repositories/02-Work/NXTGEN"
+source $NXTGEN_ROOT/devel/setup.zsh
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$NXTGEN_ROOT
+export CATKIN_WS=$NXTGEN_ROOT
 
 ### ===========================================================================
 ### Paths
@@ -49,11 +49,10 @@ alias uni='$UNSW'
 alias unsw='$UNSW'
 alias pers='cd $MONO_ROOT/01-Personal'
 alias work='cd $WORK'
-alias nxtgen='cd $WORK/NXTGEN/nxtgen-software'
+alias nxtgen='cd $NXTGEN_ROOT'
 alias mono='cd $MONO_ROOT'
 alias repos='cd $MONO_ROOT'
 alias sand='cd $MONO_ROOT/01-Personal/sandbox'
-alias nxtgen='cd $HOME/Develop/catkin_ws/src/nxtgen-software'
 
 ### Command shortcuts
 #### Remote Access
