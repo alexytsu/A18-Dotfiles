@@ -29,7 +29,7 @@ export ANDROID_SDK="$HOME/Development/Android/SDK"
 export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:~/.local/bin:$PATH
 
 #### Folder Locations
-export MONO_ROOT="$HOME/Repositories"
+export MONO_ROOT="$HOME/Develop/Repositories"
 export UNSW="$MONO_ROOT/03-University"
 export WORK="$MONO_ROOT/02-Work"
 
@@ -72,10 +72,7 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 # Application Specific 
 
 ### asdf-vm
+. ~/.config/asdf/asdf.sh
 
 ## thefuck
-. /opt/asdf-vm/asdf.sh
 eval $(thefuck --alias)
-
-# The next line updates PATH for Netlify's Git Credential Helper.
-if [ -f '/home/alexytsu/.netlify/helper/path.zsh.inc' ]; then source '/home/alexytsu/.netlify/helper/path.zsh.inc'; fi
