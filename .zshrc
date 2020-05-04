@@ -22,13 +22,6 @@ plugins=(git)
 ZSH_THEME=robbyrussell
 source $ZSH/oh-my-zsh.sh
 
-# Configure ROS
-source /opt/ros/kinetic/setup.zsh
-export NXTGEN_ROOT="$HOME/Develop/Repositories/02-Work/NXTGEN"
-source $NXTGEN_ROOT/devel/setup.zsh
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$NXTGEN_ROOT
-export CATKIN_WS=$NXTGEN_ROOT
-
 ### ===========================================================================
 ### Paths
 
@@ -41,31 +34,35 @@ export MONO_ROOT="$HOME/Develop/Repositories"
 export UNSW="$MONO_ROOT/03-University"
 export WORK="$MONO_ROOT/02-Work"
 
+#### Configure ROS
+source /opt/ros/kinetic/setup.zsh
+export CATKIN_WS="$MONO_ROOT/02-Work/NXTGEN"
+export NXTGEN_ROOT="$NXTGEN_ROOT/src/nxtgen-software"
+source $CATKIN_WS/devel/setup.zsh
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$CATKIN_WS
+
 ### ===========================================================================
 ### Custom aliases
 
 #### Easy navigations
-alias uni='$UNSW'
-alias unsw='$UNSW'
-alias pers='cd $MONO_ROOT/01-Personal'
-alias work='cd $WORK'
-alias nxtgen='cd $NXTGEN_ROOT'
-alias mono='cd $MONO_ROOT'
-alias repos='cd $MONO_ROOT'
-alias sand='cd $MONO_ROOT/01-Personal/sandbox'
+alias uni="$UNSW"
+alias unsw="$UNSW"
+alias pers="cd $MONO_ROOT/01-Personal"
+alias work="cd $WORK"
+alias nxtgen="cd $NXTGEN_ROOT"
+alias mono="cd $MONO_ROOT"
+alias repos="cd $MONO_ROOT"
+alias sand="cd $MONO_ROOT/01-Personal/sandbox"
 
 ### Command shortcuts
 #### Remote Access
-alias unswssh='ssh z5166086@login.cse.unsw.edu.au'
+alias unswssh="ssh z5166086@login.cse.unsw.edu.au"
 
 #### Utilities
-alias activate='source ./venv/bin/activate'
-alias pyprofile='python -m cProfile -s cumtime'
-alias whence='pstree -s $$'
-alias gog='g++ *.cpp && ./a.out'
-
-### ===========================================================================
-### Paths
+alias activate="source ./venv/bin/activate"
+alias pyprofile="python -m cProfile -s cumtime"
+alias whence="pstree -s $$"
+alias gog="g++ *.cpp && ./a.out"
 
 ### ===========================================================================
 ### Dotfile system
