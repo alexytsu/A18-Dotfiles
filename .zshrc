@@ -7,7 +7,6 @@ export PROMPT_EOL_MARK=''
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0 #fixes minimising CS:GO
 
 # Hardware configs
-xrandr --output HDMI-0 --mode 2560x1440 --rate 144.01
 setxkbmap -option caps:escape
 
 # Make shit XDG compliant
@@ -26,8 +25,7 @@ source $ZSH/oh-my-zsh.sh
 ### Paths
 
 ### Installed locations
-export ANDROID_SDK="$HOME/Development/Android/SDK"
-export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:~/.local/bin:$PATH
+export PATH=~/.local/bin:~/.local/kitty.app/bin:$PATH
 
 #### Folder Locations
 export MONO_ROOT="$HOME/Develop/Repositories"
@@ -37,7 +35,7 @@ export WORK="$MONO_ROOT/02-Work"
 #### Configure ROS
 source /opt/ros/kinetic/setup.zsh
 export CATKIN_WS="$MONO_ROOT/02-Work/NXTGEN"
-export NXTGEN_ROOT="$NXTGEN_ROOT/src/nxtgen-software"
+export NXTGEN_ROOT="$CATKIN_WS/src/nxtgen-software"
 source $CATKIN_WS/devel/setup.zsh
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$CATKIN_WS
 
