@@ -25,7 +25,7 @@ source $ZSH/oh-my-zsh.sh
 ### Paths
 
 ### Installed locations
-export PATH=~/.local/bin:~/.local/kitty.app/bin:$PATH
+export PATH=~/.local/bin:$PATH
 
 #### Folder Locations
 export MONO_ROOT="$HOME/Develop/Repositories"
