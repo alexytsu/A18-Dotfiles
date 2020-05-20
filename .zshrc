@@ -61,6 +61,9 @@ alias activate="source ./venv/bin/activate"
 alias pyprofile="python -m cProfile -s cumtime"
 alias whence="pstree -s $$"
 alias gog="g++ *.cpp && ./a.out"
+alias update="sudo apt update"
+alias upgradable="sudo apt list --upgradable"
+alias upgrade="sudo apt upgrade"
 
 ### ===========================================================================
 ### Dotfile system
