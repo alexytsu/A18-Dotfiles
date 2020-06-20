@@ -33,7 +33,7 @@ export UNSW="$MONO_ROOT/03-University"
 export WORK="$MONO_ROOT/02-Work"
 
 #### Configure ROS
-source /opt/ros/kinetic/setup.zsh
+source /opt/ros/melodic/setup.zsh
 export CATKIN_WS="$MONO_ROOT/02-Work/NXTGEN"
 export NXTGEN_ROOT="$CATKIN_WS/src/nxtgen-software"
 source $CATKIN_WS/devel/setup.zsh
