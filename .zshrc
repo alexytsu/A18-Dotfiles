@@ -14,7 +14,7 @@ export ASDF_DATA_DIR="$XDG_CONFIG_HOME/asdf"
 export ASDF_DIR="$XDG_CONFIG_HOME/asdf"
 
 # Configure oh-my-zsh
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 ZSH_THEME=robbyrussell
 source $ZSH/oh-my-zsh.sh
 
