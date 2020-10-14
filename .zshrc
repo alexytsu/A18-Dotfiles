@@ -15,6 +15,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/config"
 export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/asdf/.asdfrc"
 export ASDF_DATA_DIR="$XDG_CONFIG_HOME/asdf"
 export ASDF_DIR="$XDG_CONFIG_HOME/asdf"
+export arduino_location="$HOME/Develop/arduino-1.6.7"
 
 # Configure oh-my-zsh
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
@@ -64,6 +65,9 @@ alias gog="g++ *.cpp && ./a.out"
 alias update="sudo apt update"
 alias upgradable="sudo apt list --upgradable"
 alias upgrade="sudo apt upgrade"
+alias exar="cd ~/Develop/Downloads/ClearPath/ExarKernelDriver && sudo ./install_drvr"
+alias gdm='git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d'
+
 
 ### ===========================================================================
 ### Dotfile system
@@ -80,3 +84,19 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 ## thefuck
 eval $(thefuck --alias)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/alexytsu/Develop/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/alexytsu/Develop/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/alexytsu/Develop/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/alexytsu/Develop/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
